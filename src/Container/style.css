@@ -1,0 +1,11 @@
+.bodyContainer {
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
