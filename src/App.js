@@ -1,10 +1,19 @@
 import Container from "./Container";
 import Paragraph from "./Paragraph";
+import Form from "./Form";
+import { useState } from "react";
 function App() {
+  const allCurrencies = [
+    { id: 1, name: "PLN", value: 1 },
+    { id: 2, name: "EURO", value: 0.2099 },
+    { id: 3, name: "USD", value: 0.2194 },
+    { id: 4, name: "CHF", value: 0.2131 },
+    { id: 5, name: "GBP", value: 0.1789 },
+  ];
+  const [currencies, setCurrencies] = useState();
   return (
     <Container>
-      <form className="exchangerForm">
-        <fieldset className="exchangerForm__fieldset">
+      <Form>
           <legend className="exchangerForm__legend">Currency Exchanger</legend>
           <Paragraph>
 
@@ -36,8 +45,7 @@ function App() {
           </Paragraph>
           <div className="exchangerForm__summaryExchange">
           </div>
-        </fieldset>
-      </form>
+      </Form>
     </Container>
   );
 }
