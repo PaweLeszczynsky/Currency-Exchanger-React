@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Select = ({ name }) => {
+const Select = ({ name }) => (
     <>
         <select className="exchangerForm__selectCurrency" name={name}>
             <option value="PLN" selected>PLN</option>
@@ -12,5 +12,5 @@ const Select = ({ name }) => {
         <input className="exchangerForm__amountCurrency"
             name="amountToexchange" type="number" min="0" step="0.01" />
     </>
-};
+);
 export default Select;

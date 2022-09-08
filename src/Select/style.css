@@ -8,3 +8,16 @@
     text-align: center;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+.exchangerForm__amountCurrency {
+    border: 2px solid black;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 70px;
+    outline: none;
+    padding: 20px;
+    text-align: center;
+    margin-left: -2px;
+    min-width: 100px;
+    width: 40%;
+    background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
+}
