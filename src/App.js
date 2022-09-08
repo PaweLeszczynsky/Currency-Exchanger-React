@@ -13,36 +13,40 @@ function App() {
     { id: 4, name: "CHF", value: 0.2131 },
     { id: 5, name: "GBP", value: 0.1789 },
   ];
-  const [currencies, setCurrencies] = useState();
+  const [currencies, setCurrencies] = useState(
+    [{
+      id: 1,
+      firstCurrency: "PLN",
+      secoundCurrency: "PLN",
+      rate: 1,
+      amount: 1
+    }]);
   return (
     <Container>
       <Form
         firstItem={
           <Paragraph
-            body={
-              <Select
-                name="firstCurrency"
-              />
-            }
+            body={<Select
+              selectName="firstCurrency"
+              inputName="secoundCurrency"
+              disabledValue={false}
+              stepValue={0.01}
+            />}
           />}
         secoundItem={
           <Paragraph
-            body={
-              <Select
-                name="secoundCurrency"
-              />
-            }
+            body={<Select
+              selectName="secoundCurrency"
+              inputName="amountExchanged"
+              disabledValue={true}
+              stepValue={false}
+            />}
           />}
         thirdItem={
           <Paragraph
-            body={
-              <LabelRate />
-            }
+            body={<LabelRate />}
           />}
-        fourthItem={
-          <SummaryInfo
-          />
-        }
+        fourthItem={<SummaryInfo />}
       />
     </Container>
   );
