@@ -1,6 +1,7 @@
 import "./style.css";
-const Paragraph = ({ children }) => (
+const Paragraph = ({ body }) => (
     <p className="exchangerForm__paragraph">
-        {children}</p>
+        {body}
+    </p>
 );
 export default Paragraph;
