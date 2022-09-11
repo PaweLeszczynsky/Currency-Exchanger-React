@@ -24,3 +24,17 @@
     text-align: center;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+.exchangerForm__amountExchangerate:disabled {
+    color: black;
+}
+@media (max-width:500px) {
+    
+    .exchangerForm__exchangeRate {
+        min-width: 50%;
+    }
+
+    .exchangerForm__amountExchangerate {
+        min-width: 50%;
+    }
+
+}

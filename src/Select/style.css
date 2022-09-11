@@ -21,3 +21,23 @@
     width: 40%;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+@media (max-width:500px) {
+    .exchangerForm__selectCurrency {
+        border-radius: 20px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .exchangerForm__amountCurrency {
+        border: 2px solid black;
+        border-radius: 20px;
+        height: 70px;
+        outline: none;
+        padding: 20px;
+        text-align: center;
+        margin-left: -2px;
+        min-width: 100px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
