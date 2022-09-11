@@ -19,15 +19,21 @@ function App() {
       firstCurrency: "PLN",
       secoundCurrency: "PLN",
       rate: 1,
-      amount: 1
+      toExchangeAmount: 1,
+      exchangedAmount: 1,
     }]);
+    
   return (
     <Container>
       <Form
         firstItem={
           <Paragraph
             body={<Select
+              allCurrencies={allCurrencies}
+              currencies={currencies}
+              setCurrencies={setCurrencies}
               selectName="firstCurrency"
+              selectId={1}
               inputName="secoundCurrency"
               disabledValue={false}
               stepValue={0.01}
@@ -36,7 +42,11 @@ function App() {
         secoundItem={
           <Paragraph
             body={<Select
+              allCurrencies={allCurrencies}
+              currencies={currencies}
+              setCurrencies={setCurrencies}
               selectName="secoundCurrency"
+              selectId={2}
               inputName="amountExchanged"
               disabledValue={true}
               stepValue={false}
