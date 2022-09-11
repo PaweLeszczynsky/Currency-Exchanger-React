@@ -22,7 +22,7 @@ function App() {
       toExchangeAmount: 1,
       exchangedAmount: 1,
     }]);
-    
+
   return (
     <Container>
       <Form
@@ -49,7 +49,6 @@ function App() {
               selectId={2}
               inputName="amountExchanged"
               disabledValue={true}
-              stepValue={false}
             />}
           />}
         thirdItem={
