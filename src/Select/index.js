@@ -1,6 +1,7 @@
 import "./style.css";
+import { allCurrencies } from "../currenciesArray";
 
-const Select = ({ allCurrencies, currencies, setCurrencies, selectName, selectId, inputName, disabledValue, stepValue }) => {
+const Select = ({ currencies, setCurrencies, selectName, selectId, inputName, disabledValue, stepValue }) => {
     const findSelect = (index) => {
         return (index === 1 ? currencies.firstCurrency : currencies.secoundCurrency)
     };
