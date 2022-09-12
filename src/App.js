@@ -23,6 +23,18 @@ function App() {
       exchangedAmount: 1,
     }]);
 
+  const calculateRate = () => {
+    const firstValue = allCurrencies?.find(({ name }) => name === currencies.firstCurrency)?.value;
+    console.log(firstValue);
+    const secoundValue = allCurrencies?.find(({ name }) => name === currencies.secoundCurrency)?.value;
+    console.log(secoundValue);
+    // setCurrencies({
+    //   ...currencies,
+    //   rate: secoundValue / firstValue,
+    // });
+    return secoundValue / firstValue;
+  };
+  console.log(calculateRate());
   return (
     <Container>
       <Form
@@ -53,7 +65,9 @@ function App() {
           />}
         thirdItem={
           <Paragraph
-            body={<LabelRate />}
+            body={<LabelRate
+              currencies={currencies}
+            />}
           />}
         fourthItem={<SummaryInfo />}
       />
