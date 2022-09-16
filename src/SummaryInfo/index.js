@@ -1,10 +1,10 @@
 import "./style.css";
-const SummaryInfo = ({ currencies }) => {
+const SummaryInfo = ({ firstCurrency, secoundCurrency, amountToExchange, result }) => {
     return (
-        <div className={`exchangerForm__summaryExchange ${currencies.toExchangeAmount > 0 ? "exchangerForm__summaryExchange--visible" : ""}`}>
-            {currencies.firstCurrency === currencies.secoundCurrency ?
+        <div className={`exchangerForm__summaryExchange ${amountToExchange > 0 ? "exchangerForm__summaryExchange--visible" : ""}`}>
+            {firstCurrency === secoundCurrency ?
                 `Choose another currency` :
-                (`${currencies.toExchangeAmount} ${currencies.firstCurrency} = ${currencies.exchangedAmount} ${currencies.secoundCurrency}`)}
+                (`${amountToExchange} ${firstCurrency} = ${result.toFixed(2)} ${secoundCurrency}`)}
         </div>
     )
 };
