@@ -1,9 +1,10 @@
 import "./style.css";
-const LabelRate = () => (
-    <>
-        <label className="exchangerForm__exchangeRate"><span>RATE</span></label><input
-            className="exchangerForm__amountExchangerate" disabled
-            type="number" name="value" value="0.2099" />
-    </>
-);
+const LabelRate = ({ rate }) => {
+    return (
+        <>
+            <div className="exchangerForm__exchangeRate"><span>RATE</span></div>
+            <div className="exchangerForm__amountExchangerate">{rate.toFixed(4)}</div>
+        </>
+    )
+};
 export default LabelRate;
