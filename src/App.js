@@ -1,5 +1,5 @@
 import Container from "./Container";
-import Paragraph from "./Paragraph";
+import InputContainer from "./InputContainer";
 import Form from "./Form";
 import Select from "./Select";
 import { useState } from "react";
@@ -34,7 +34,7 @@ function App() {
         amountToExchange={amountToExchange}
         rate={rate}
         firstItem={
-          <Paragraph
+          <InputContainer
             body={<Select
               firstCurrency={firstCurrency}
               setFirstCurrency={setFirstCurrency}
@@ -47,7 +47,7 @@ function App() {
             />}
           />}
         secoundItem={
-          <Paragraph
+          <InputContainer
             body={<Select
               secoundCurrency={secoundCurrency}
               setSecoundCurrency={setSecoundCurrency}
@@ -61,7 +61,7 @@ function App() {
             />}
           />}
         thirdItem={
-          <Paragraph
+          <InputContainer
             body={<LabelRate
               rate={rate}
             />}
