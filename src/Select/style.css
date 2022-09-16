@@ -21,6 +21,9 @@
     width: 40%;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+.exchangerForm__amountCurrency:disabled {
+    color: black;
+}
 @media (max-width:500px) {
     .exchangerForm__selectCurrency {
         border-radius: 20px;
