@@ -1,7 +1,9 @@
 import "./style.css";
 import { allCurrencies } from "../currenciesArray";
 
-const Select = ({ result,firstCurrency, setFirstCurrency, secoundCurrency, setSecoundCurrency, amountToExchange, setAmountToExchange, selectName, selectId, inputName, disabledValue, stepValue }) => {
+const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
+    setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,
+    selectId, inputName, disabledValue, stepValue }) => {
     const findSelect = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
@@ -11,10 +13,10 @@ const Select = ({ result,firstCurrency, setFirstCurrency, secoundCurrency, setSe
                 setFirstCurrency(target.value)
                 : setSecoundCurrency(target.value))
     };
-    const setInput=({target})=>{
+    const setInput = ({ target }) => {
         setAmountToExchange(target.value)
     };
-    const findValue =(index)=>{
+    const findValue = (index) => {
         return (index === 1 ? amountToExchange : result.toFixed(2))
     };
     return (
