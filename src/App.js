@@ -2,7 +2,7 @@ import Container from "./Container";
 import InputContainer from "./InputContainer";
 import Form from "./Form";
 import Select from "./Select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LabelRate from "./LabelRate";
 import SummaryInfo from "./SummaryInfo";
 import { allCurrencies } from "./currenciesArray";
@@ -12,31 +12,27 @@ function App() {
   const [amountToExchange, setAmountToExchange] = useState(0);
   const [rate, setRate] = useState(1);
   const [result, setResult] = useState(0);
-  const calculateRate = (firstCurrency, secoundCurrency) => {
+  useEffect(() => {
     const firstValue = allCurrencies.find(({ name }) => name === firstCurrency).value;
-    console.log(firstValue);
     const secoundValue = allCurrencies.find(({ name }) => name === secoundCurrency).value;
-    console.log(secoundValue);
     const rateValue = secoundValue / firstValue;
     setRate(rateValue);
-  };
-  const calculateResult = (amountToExchange, rate) => {
+  }, [firstCurrency, secoundCurrency]);
+  useEffect(() => {
     setResult(rate * amountToExchange);
-
-  };
+  }, [rate, amountToExchange]);
   return (
     <Container>
       <Form
-        calculateRate={calculateRate}
-        calculateResult={calculateResult}
         firstCurrency={firstCurrency}
         secoundCurrency={secoundCurrency}
         amountToExchange={amountToExchange}
         rate={rate}
+        result={result}
         firstItem={
           <InputContainer
             body={<Select
-              firstCurrency={firstCurrency}
+              firstCurrency={firstCurrency} secoundCurrency={secoundCurrency} amountToExchange={amountToExchange} rate={rate} result={result}
               setFirstCurrency={setFirstCurrency}
               setAmountToExchange={setAmountToExchange}
               selectName="firstCurrency"
@@ -49,9 +45,8 @@ function App() {
         secoundItem={
           <InputContainer
             body={<Select
-              secoundCurrency={secoundCurrency}
+              firstCurrency={firstCurrency} secoundCurrency={secoundCurrency} amountToExchange={amountToExchange} rate={rate}
               setSecoundCurrency={setSecoundCurrency}
-              amountToExchange={amountToExchange}
               setAmountToExchange={setAmountToExchange}
               selectName="secoundCurrency"
               selectId={2}
@@ -63,11 +58,12 @@ function App() {
         thirdItem={
           <InputContainer
             body={<LabelRate
+              firstCurrency={firstCurrency} secoundCurrency={secoundCurrency} amountToExchange={amountToExchange} result={result}
               rate={rate}
             />}
           />}
         fourthItem={<SummaryInfo
-          firstCurrency={firstCurrency}
+          firstCurrency={firstCurrency} rate={rate}
           secoundCurrency={secoundCurrency}
           amountToExchange={amountToExchange}
           result={result}
