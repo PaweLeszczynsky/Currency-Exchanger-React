@@ -1,15 +1,7 @@
 import "./style.css";
-
-const Form = ({ calculateRate, calculateResult, firstCurrency, secoundCurrency, amountToExchange, rate, firstItem, secoundItem, thirdItem, fourthItem }) => {
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        console.log(firstCurrency, secoundCurrency, amountToExchange, rate);
-        calculateRate(firstCurrency, secoundCurrency);
-        console.log(firstCurrency, secoundCurrency, amountToExchange, rate);
-        calculateResult(amountToExchange, rate);
-    };
+const Form = ({firstItem, secoundItem, thirdItem, fourthItem }) => {
     return (
-        <form onInput={onFormSubmit}
+        <form
             className="exchangerForm">
             <fieldset className="exchangerForm__fieldset">
                 <legend className="exchangerForm__legend">Currency Exchanger</legend>
@@ -20,5 +12,4 @@ const Form = ({ calculateRate, calculateResult, firstCurrency, secoundCurrency, 
             </fieldset>
         </form>)
 };
-
 export default Form;
