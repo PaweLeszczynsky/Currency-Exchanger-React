@@ -19,6 +19,9 @@ function App() {
     setRate(rateValue);
   }, [firstCurrency, secoundCurrency]);
   useEffect(() => {
+    if (amountToExchange < 0) {
+      setAmountToExchange(Math.abs(amountToExchange));
+    };
     setResult(rate * amountToExchange);
   }, [rate, amountToExchange]);
   return (
