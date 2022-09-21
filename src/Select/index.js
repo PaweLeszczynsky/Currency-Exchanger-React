@@ -7,7 +7,7 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     const findSelect = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
-    const setSecoundCurency = (index, target) => {
+    const setSecoundCurrency = (index, target) => {
         return (
             index === 1 ?
                 setFirstCurrency(target.value)
@@ -22,7 +22,7 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     return (
         <>
             <select className="exchangerForm__selectCurrency" name={selectName} value={findSelect(selectId)}
-                onChange={({ target }) => setSecoundCurency(selectId, target)}
+                onChange={({ target }) => setSecoundCurrency(selectId, target)}
             >
                 {
                     allCurrencies.map(({ id, name }) => (
