@@ -4,10 +4,10 @@ import { allCurrencies } from "../currenciesArray";
 const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,
     selectId, inputName, disabledValue, stepValue }) => {
-    const findSelect = (index) => {
+    const findSelectValue = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
-    const setSecoundCurrency = (index, target) => {
+    const findSelectModifier = (index, target) => {
         return (
             index === 1 ?
                 setFirstCurrency(target.value)
@@ -21,8 +21,8 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     };
     return (
         <>
-            <select className="exchangerForm__selectCurrency" name={selectName} value={findSelect(selectId)}
-                onChange={({ target }) => setSecoundCurrency(selectId, target)}
+            <select className="exchangerForm__selectCurrency" name={selectName} value={findSelectValue(selectId)}
+                onChange={({ target }) => findSelectModifier(selectId, target)}
             >
                 {
                     allCurrencies.map(({ id, name }) => (

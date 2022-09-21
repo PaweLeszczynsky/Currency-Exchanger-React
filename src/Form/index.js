@@ -1,5 +1,5 @@
 import "./style.css";
-const Form = ({firstItem, secoundItem, thirdItem, fourthItem }) => {
+const Form = ({ firstItem, secoundItem, thirdItem, fourthItem }) => {
     return (
         <form
             className="exchangerForm">
