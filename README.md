@@ -19,6 +19,14 @@ The website allows exchange five currencies.
 
  ![Result of convert value](https://github.com/PaweLeszczynsky/Currency-Exchanger/blob/main/images/readmevaluetxt.png?raw=true)
 
+## Used technologies
+
+- HTML
+- CSS (Flexbox, Grid, Media Queries, BEM)
+- JavaScript ES6
+- Markdown
+- Create React App (Hooks, Handling Events)
+
 ### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
