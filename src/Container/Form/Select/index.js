@@ -7,21 +7,27 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     const findSelectValue = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
+
     const findSelectModifier = (index, target) => {
         return (
             index === 1 ?
                 setFirstCurrency(target.value)
                 : setSecoundCurrency(target.value))
     };
+
     const setInput = ({ target }) => {
         setAmountToExchange(target.value)
     };
+
     const findValue = (index) => {
         return (index === 1 ? amountToExchange : result.toFixed(2))
     };
+
     return (
         <>
-            <select className="exchangerForm__selectCurrency" name={selectName} value={findSelectValue(selectId)}
+            <select className="selectCurrency"
+                name={selectName}
+                value={findSelectValue(selectId)}
                 onChange={({ target }) => findSelectModifier(selectId, target)}
             >
                 {
@@ -30,9 +36,13 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
                     )
                 }
             </select>
-            <input className="exchangerForm__amountCurrency"
+            <input className="amountCurrency"
                 name={inputName}
-                disabled={disabledValue} type="number" min="0" step={stepValue} value={findValue(selectId)}
+                disabled={disabledValue}
+                type="number"
+                min="0"
+                step={stepValue}
+                value={findValue(selectId)}
                 onChange={setInput}
             />
         </>

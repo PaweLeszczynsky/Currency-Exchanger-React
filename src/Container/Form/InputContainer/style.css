@@ -1,4 +1,4 @@
-.exchangerForm__paragraph {
+.inputContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 @media (max-width:500px) {
-    .exchangerForm__paragraph {
+    .inputContainer {
         display: flex;
         flex-direction: row;
         justify-content: center;

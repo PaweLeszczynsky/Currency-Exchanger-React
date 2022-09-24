@@ -1,4 +1,4 @@
-.exchangerForm__exchangeRate {
+.exchangeRate {
     border: 2px solid black;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -12,7 +12,7 @@
     margin-right: -2px;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
-.exchangerForm__amountExchangerate {
+.amountExchangeRate {
     border: 2px solid black;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
@@ -25,16 +25,16 @@
     line-height: 1.5;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
-.exchangerForm__amountExchangerate:disabled {
+.amountExchangeRate:disabled {
     color: black;
 }
 @media (max-width:500px) {
     
-    .exchangerForm__exchangeRate {
+    .exchangeRate {
         min-width: 50%;
     }
 
-    .exchangerForm__amountExchangerate {
+    .amountExchangeRate {
         min-width: 50%;
     }
 

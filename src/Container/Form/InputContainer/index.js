@@ -1,6 +1,6 @@
 import "./style.css";
 const InputContainer = ({ children }) => (
-    <div className="exchangerForm__paragraph">
+    <div className="inputContainer">
         {children}
     </div>
 );

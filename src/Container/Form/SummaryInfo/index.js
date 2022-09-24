@@ -1,8 +1,9 @@
 import "./style.css";
+
 const SummaryInfo = ({ firstCurrency, secoundCurrency, amountToExchange, result }) => {
     return (
-        <div className={`exchangerForm__summaryExchange 
-        ${amountToExchange > 0 ? "exchangerForm__summaryExchange--visible" : ""}`}
+        <div className={`summaryExchange 
+        ${amountToExchange > 0 ? "summaryExchange--visible" : ""}`}
         >
             {firstCurrency === secoundCurrency ?
                 `Choose another currency` :

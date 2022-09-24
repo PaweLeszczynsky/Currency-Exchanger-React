@@ -1,4 +1,4 @@
-.exchangerForm__summaryExchange {
+.summaryExchange {
     border: 2px solid black;
     border-radius: 20px;
     min-height: 70px;
@@ -14,6 +14,6 @@
     flex-wrap: wrap;
     margin: 10px;
 }
-.exchangerForm__summaryExchange--visible{
+.summaryExchange--visible{
     display: flex;
 }

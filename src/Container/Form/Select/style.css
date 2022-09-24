@@ -1,4 +1,4 @@
-.exchangerForm__selectCurrency {
+.selectCurrency {
     border: 2px solid black;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -8,7 +8,7 @@
     text-align: center;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
-.exchangerForm__amountCurrency {
+.amountCurrency {
     border: 2px solid black;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
@@ -21,17 +21,17 @@
     width: 40%;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
-.exchangerForm__amountCurrency:disabled {
+.amountCurrency:disabled {
     color: black;
 }
 @media (max-width:500px) {
-    .exchangerForm__selectCurrency {
+    .selectCurrency {
         border-radius: 20px;
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .exchangerForm__amountCurrency {
+    .amountCurrency {
         border: 2px solid black;
         border-radius: 20px;
         height: 70px;
