@@ -1,5 +1,5 @@
 import "./style.css";
-import { allCurrencies } from "../currenciesArray";
+import { allCurrencies } from "../../../currenciesArray";
 
 const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,

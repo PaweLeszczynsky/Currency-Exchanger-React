@@ -1,7 +1,7 @@
 import "./style.css";
-const InputContainer = ({ body }) => (
+const InputContainer = ({ children }) => (
     <div className="exchangerForm__paragraph">
-        {body}
+        {children}
     </div>
 );
 export default InputContainer;
