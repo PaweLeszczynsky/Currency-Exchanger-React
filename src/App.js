@@ -9,6 +9,7 @@ function App() {
   const [amountToExchange, setAmountToExchange] = useState(0);
   const [rate, setRate] = useState(1);
   const [result, setResult] = useState(0);
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     const firstValue = allCurrencies.find(({ name }) => name === firstCurrency).value;
@@ -23,7 +24,13 @@ function App() {
     };
     setResult(rate * amountToExchange);
   }, [rate, amountToExchange]);
-  
+
+  useEffect(() => {
+    setInterval(() => {
+      setDate(new Date());
+    }, 1000)
+  });
+
   return (
     <Container>
       <Form
@@ -35,6 +42,7 @@ function App() {
         setFirstCurrency={setFirstCurrency}
         setSecoundCurrency={setSecoundCurrency}
         setAmountToExchange={setAmountToExchange}
+        date={date}
       />
     </Container>
   );
