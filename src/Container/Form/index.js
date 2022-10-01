@@ -3,8 +3,9 @@ import InputContainer from "./InputContainer";
 import Select from "./Select";
 import LabelRate from "./LabelRate";
 import SummaryInfo from "./SummaryInfo";
+import DateContainer from "./DateContainer";
 
-const Form = ({ firstCurrency, secoundCurrency, amountToExchange,
+const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
     rate, result, setFirstCurrency, setSecoundCurrency,
     setAmountToExchange }) => {
     return (
@@ -14,6 +15,7 @@ const Form = ({ firstCurrency, secoundCurrency, amountToExchange,
                 <legend className="exchangerForm__legend">
                     Currency Exchanger
                 </legend>
+                <DateContainer date={date} />
                 <InputContainer>
                     <Select
                         firstCurrency={firstCurrency}
