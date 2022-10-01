@@ -26,9 +26,10 @@ function App() {
   }, [rate, amountToExchange]);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setDate(new Date());
-    }, 1000)
+    }, 1000);
+    return () => { clearInterval(interval); };
   });
 
   return (
