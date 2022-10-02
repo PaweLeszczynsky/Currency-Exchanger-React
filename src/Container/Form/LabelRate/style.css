@@ -12,6 +12,7 @@
     margin-right: -2px;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+
 .amountExchangeRate {
     border: 2px solid black;
     border-bottom-right-radius: 20px;
@@ -25,11 +26,13 @@
     line-height: 1.5;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+
 .amountExchangeRate:disabled {
     color: black;
 }
+
 @media (max-width:500px) {
-    
+
     .exchangeRate {
         min-width: 50%;
     }
@@ -37,5 +40,4 @@
     .amountExchangeRate {
         min-width: 50%;
     }
-
 }

@@ -1,4 +1,5 @@
 import "./style.css";
+
 const LabelRate = ({ rate }) => {
     return (
         <>
@@ -7,4 +8,5 @@ const LabelRate = ({ rate }) => {
         </>
     )
 };
+
 export default LabelRate;

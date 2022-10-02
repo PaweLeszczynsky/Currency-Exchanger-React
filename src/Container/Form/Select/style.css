@@ -8,6 +8,7 @@
     text-align: center;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+
 .amountCurrency {
     border: 2px solid black;
     border-bottom-right-radius: 20px;
@@ -21,9 +22,11 @@
     width: 40%;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 }
+
 .amountCurrency:disabled {
     color: black;
 }
+
 @media (max-width:500px) {
     .selectCurrency {
         border-radius: 20px;

@@ -48,4 +48,5 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
         </>
     )
 };
+
 export default Select;

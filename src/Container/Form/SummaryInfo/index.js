@@ -12,4 +12,5 @@ const SummaryInfo = ({ firstCurrency, secoundCurrency, amountToExchange, result 
         </div>
     )
 };
+
 export default SummaryInfo;

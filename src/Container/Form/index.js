@@ -68,4 +68,5 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
             </fieldset>
         </form>)
 };
+
 export default Form;
