@@ -3,20 +3,23 @@ import Form from "./Container/Form";
 import { useState, useEffect } from "react";
 import { allCurrencies } from "./currenciesArray";
 
+const useCurrencyValue = (firstCurrency, secoundCurrency, setRate) => {
+  useEffect(() => {
+    const firstValue = allCurrencies.find(({ name }) => name === firstCurrency).value;
+    const secoundValue = allCurrencies.find(({ name }) => name === secoundCurrency).value;
+    const rateValue = secoundValue / firstValue;
+    setRate(rateValue);
+  }, [firstCurrency, secoundCurrency, setRate]);
+};
+
 function App() {
   const [firstCurrency, setFirstCurrency] = useState(allCurrencies[0].name);
   const [secoundCurrency, setSecoundCurrency] = useState(allCurrencies[0].name);
   const [amountToExchange, setAmountToExchange] = useState(0);
   const [rate, setRate] = useState(1);
   const [result, setResult] = useState(0);
-  const [date, setDate] = useState(new Date());
 
-  useEffect(() => {
-    const firstValue = allCurrencies.find(({ name }) => name === firstCurrency).value;
-    const secoundValue = allCurrencies.find(({ name }) => name === secoundCurrency).value;
-    const rateValue = secoundValue / firstValue;
-    setRate(rateValue);
-  }, [firstCurrency, secoundCurrency]);
+  useCurrencyValue(firstCurrency, secoundCurrency, setRate);
 
   useEffect(() => {
     if (amountToExchange < 0) {
@@ -24,13 +27,6 @@ function App() {
     };
     setResult(rate * amountToExchange);
   }, [rate, amountToExchange]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-    return () => { clearInterval(interval); };
-  });
 
   return (
     <Container>
@@ -43,7 +39,6 @@ function App() {
         setFirstCurrency={setFirstCurrency}
         setSecoundCurrency={setSecoundCurrency}
         setAmountToExchange={setAmountToExchange}
-        date={date}
       />
     </Container>
   );
