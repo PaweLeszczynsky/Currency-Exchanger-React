@@ -1,5 +1,8 @@
-.bodyContainer {
-    background-image: url(../images/background.jpg);
+import styled from "styled-components";
+import background from "../images/background.jpg"
+
+export const StyledAppContainer = styled.div`
+    background-image: url("${background}");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,4 +11,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+`;
