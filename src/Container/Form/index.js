@@ -1,20 +1,19 @@
-import "./style.css";
 import InputContainer from "./InputContainer";
 import Select from "./Select";
 import LabelRate from "./LabelRate";
 import SummaryInfo from "./SummaryInfo";
 import DateContainer from "./DateContainer";
+import { StyledForm, StyledFieldset, StyledLegend } from "./styled";
 
 const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
     rate, result, setFirstCurrency, setSecoundCurrency,
     setAmountToExchange }) => {
     return (
-        <form
-            className="exchangerForm">
-            <fieldset className="exchangerForm__fieldset">
-                <legend className="exchangerForm__legend">
+        <StyledForm>
+            <StyledFieldset>
+                <StyledLegend>
                     Currency Exchanger
-                </legend>
+                </StyledLegend>
                 <DateContainer date={date} />
                 <InputContainer>
                     <Select
@@ -65,8 +64,8 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
                     amountToExchange={amountToExchange}
                     result={result}
                 />
-            </fieldset>
-        </form>)
+            </StyledFieldset>
+        </StyledForm>)
 };
 
 export default Form;

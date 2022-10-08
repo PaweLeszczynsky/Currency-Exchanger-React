@@ -1,4 +1,6 @@
-.exchangerForm {
+import styled from "styled-components";
+
+export const StyledForm = styled.form`
     background-color: rgb(163 208 255 / 80%);
     margin: 5% 10%;
     padding: 5% 5%;
@@ -8,9 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+`;
 
-.exchangerForm__fieldset {
+export const StyledFieldset = styled.fieldset`
     padding: 50px;
     border-radius: 20px;
     flex-basis: 800px;
@@ -18,25 +20,21 @@
     flex-direction: column;
     align-items: center;
     border-color: rgb(34 153 195);
+    
+    @media (max-width:500px) {
+        padding: 50px 8vw;
 }
+    @media (max-width:350px) {
+            padding: 50px 0;
+    }
+`;
 
-.exchangerForm__legend {
+export const StyledLegend = styled.legend`
     padding: 0 5%;
     text-align: center;
-}
-
-@media (max-width:500px) {
-    .exchangerForm__fieldset {
-        padding: 50px 8vw;
-    }
-}
-
-@media (max-width:350px) {
-    .exchangerForm__fieldset {
-        padding: 50px 0;
-    }
-    .exchangerForm__legend {
+    
+    @media (max-width:350px) {
         padding: 0 1%;
         text-align: center;
     }
-}
+`;
