@@ -14,3 +14,10 @@
     margin: 10px;
     font-size: small;
 }
+
+@media (max-width:500px) {
+    .dateContainer {
+        min-width: 100%;
+    }
+
+}

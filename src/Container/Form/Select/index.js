@@ -25,26 +25,28 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
 
     return (
         <>
-            <select className="selectCurrency"
-                name={selectName}
-                value={findSelectValue(selectId)}
-                onChange={({ target }) => findSelectModifier(selectId, target)}
-            >
-                {
-                    allCurrencies.map(({ id, name }) => (
-                        <option key={id} value={name}>{name}</option>)
-                    )
-                }
-            </select>
-            <input className="amountCurrency"
-                name={inputName}
-                disabled={disabledValue}
-                type="number"
-                min="0"
-                step={stepValue}
-                value={findValue(selectId)}
-                onChange={setInput}
-            />
+            <div className="inputContainer">
+                <select className="selectCurrency"
+                    name={selectName}
+                    value={findSelectValue(selectId)}
+                    onChange={({ target }) => findSelectModifier(selectId, target)}
+                >
+                    {
+                        allCurrencies.map(({ id, name }) => (
+                            <option key={id} value={name}>{name}</option>)
+                        )
+                    }
+                </select>
+                <input className="amountCurrency"
+                    name={inputName}
+                    disabled={disabledValue}
+                    type="number"
+                    min="0"
+                    step={stepValue}
+                    value={findValue(selectId)}
+                    onChange={setInput}
+                />
+            </div>
         </>
     )
 };

@@ -1,4 +1,4 @@
-import InputContainer from "./InputContainer";
+// import InputContainer from "./InputContainer";
 import Select from "./Select";
 import LabelRate from "./LabelRate";
 import SummaryInfo from "./SummaryInfo";
@@ -15,7 +15,6 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
                     Currency Exchanger
                 </StyledLegend>
                 <DateContainer date={date} />
-                <InputContainer>
                     <Select
                         firstCurrency={firstCurrency}
                         secoundCurrency={secoundCurrency}
@@ -30,9 +29,6 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
                         disabledValue={false}
                         stepValue={0.01}
                     />
-                </InputContainer>
-
-                <InputContainer>
                     <Select
                         firstCurrency={firstCurrency}
                         secoundCurrency={secoundCurrency}
@@ -46,9 +42,6 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
                         disabledValue={true}
                         result={result}
                     />
-                </InputContainer>
-
-                <InputContainer>
                     <LabelRate
                         firstCurrency={firstCurrency}
                         secoundCurrency={secoundCurrency}
@@ -56,8 +49,6 @@ const Form = ({ date, firstCurrency, secoundCurrency, amountToExchange,
                         result={result}
                         rate={rate}
                     />
-                </InputContainer>
-
                 <SummaryInfo
                     firstCurrency={firstCurrency} rate={rate}
                     secoundCurrency={secoundCurrency}
