@@ -1,4 +1,6 @@
-.dateContainer {
+import styled from "styled-components";
+
+export const StyledDateContainer = styled.div`
     border: 2px solid black;
     border-radius: 20px;
     max-width: 600px;
@@ -13,11 +15,9 @@
     flex-wrap: wrap;
     margin: 10px;
     font-size: small;
-}
+    
+    @media (max-width:500px) {
 
-@media (max-width:500px) {
-    .dateContainer {
         min-width: 100%;
     }
-
-}
+`;

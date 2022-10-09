@@ -1,14 +1,14 @@
-import "./style.css";
 import { useCurrentDate } from "../../../Clock";
+import { StyledDateContainer } from "./styled";
 
 const DateContainer = () => {
     const date = useCurrentDate();
     return (
-        <div className="dateContainer">Today is {`${date.toLocaleString("en-US", { weekday: "long" })}
+        <StyledDateContainer>Today is {`${date.toLocaleString("en-US", { weekday: "long" })}
         ${date.toLocaleString("en-US", { day: "numeric" })}
         ${date.toLocaleString("en-US", { month: "long", year: "numeric" })}
         ${date.toLocaleTimeString()}`}
-        </div>
+        </StyledDateContainer>
     );
 };
 
