@@ -1,9 +1,11 @@
 # Currency Exchanger with Create React App
 ## Preview
 
-![ReadmeSS](https://github.com/PaweLeszczynsky/Currency-Exchanger/blob/main/images/readmess.png?raw=true)
+![ReadmeSS](./src/images/readmess1.png)
 
 Link to website [CurrencyExchanger](https://paweleszczynsky.github.io/Currency-Exchanger-React/)
+
+Link to [App video presentation](https://youtu.be/4BRoh-tp93c)
 
 ## Description website
 
@@ -17,7 +19,7 @@ The website allows exchange five currencies.
 
  Exchanger currency allows choose two types of currencies. First currency to exchange and secound target currency. After type any value the website automatically recalculates and presents the result. Additionally website shows the current exchange rate. After converting value, under rate value bar appears information bar and concludes currency exchange.
 
- ![Result of convert value](https://github.com/PaweLeszczynsky/Currency-Exchanger/blob/main/images/readmevaluetxt.png?raw=true)
+ ![Result of convert value](./src/images/readmess2.png)
 
 ## Used technologies
 
