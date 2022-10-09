@@ -6,7 +6,7 @@ export const StyledRateContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px;
-    width: 60%;
+    width: 250px;
 
     @media (max-width:500px) {
     display: flex;
