@@ -4,6 +4,13 @@ import { StyledSelectContainer, StyledSelect, StyledInput } from "./styled";
 const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,
     selectId, inputName, disabledValue, stepValue }) => {
+
+    const resetInput = () => {
+        if (amountToExchange === 0) {
+            setAmountToExchange("");
+        };
+    };
+    
     const findSelectValue = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
@@ -16,7 +23,7 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     };
 
     const setInput = ({ target }) => {
-        setAmountToExchange(target.value)
+        setAmountToExchange(+target.value)
     };
 
     const findValue = (index) => {
@@ -45,6 +52,7 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
                     step={stepValue}
                     value={findValue(selectId)}
                     onChange={setInput}
+                    onClick={resetInput}
                 />
             </StyledSelectContainer>
         </>
