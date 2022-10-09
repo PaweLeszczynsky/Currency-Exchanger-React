@@ -1,4 +1,3 @@
-// import InputContainer from "./InputContainer";
 import Select from "./Select";
 import LabelRate from "./LabelRate";
 import SummaryInfo from "./SummaryInfo";
