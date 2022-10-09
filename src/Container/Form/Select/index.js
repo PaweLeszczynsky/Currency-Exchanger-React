@@ -1,5 +1,5 @@
-import "./style.css";
 import { allCurrencies } from "../../../currenciesArray";
+import { StyledSelectContainer, StyledSelect, StyledInput } from "./styled";
 
 const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,
@@ -25,8 +25,8 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
 
     return (
         <>
-            <div className="inputContainer">
-                <select className="selectCurrency"
+            <StyledSelectContainer>
+                <StyledSelect
                     name={selectName}
                     value={findSelectValue(selectId)}
                     onChange={({ target }) => findSelectModifier(selectId, target)}
@@ -36,8 +36,8 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
                             <option key={id} value={name}>{name}</option>)
                         )
                     }
-                </select>
-                <input className="amountCurrency"
+                </StyledSelect>
+                <StyledInput
                     name={inputName}
                     disabled={disabledValue}
                     type="number"
@@ -46,7 +46,7 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
                     value={findValue(selectId)}
                     onChange={setInput}
                 />
-            </div>
+            </StyledSelectContainer>
         </>
     )
 };
