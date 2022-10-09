@@ -1,15 +1,15 @@
-import "./style.css";
+import { StyledSummaryInfo } from "./styled";
 
 const SummaryInfo = ({ firstCurrency, secoundCurrency, amountToExchange, result }) => {
     return (
-        <div className={`summaryExchange 
-        ${amountToExchange > 0 ? "summaryExchange--visible" : ""}`}
+        <StyledSummaryInfo
+            visible={amountToExchange > 0}
         >
             {firstCurrency === secoundCurrency ?
                 `Choose another currency` :
                 (`${amountToExchange} ${firstCurrency} = ${result.toFixed(2)} ${secoundCurrency}`)
             }
-        </div>
+        </StyledSummaryInfo>
     )
 };
 
