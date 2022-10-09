@@ -6,7 +6,7 @@ export const StyledRateContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px;
-    width: 250px;
+    width: 100%;
 
     @media (max-width:500px) {
         display: flex;
@@ -28,7 +28,7 @@ export const StyledRate = styled.div`
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    min-width: 109px;
+    min-width: 110px;
     margin-right: -2px;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 

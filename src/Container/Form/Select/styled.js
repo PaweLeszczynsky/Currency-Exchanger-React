@@ -6,7 +6,7 @@ export const StyledSelectContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px;
-    width: 250px;
+    width: 100%;
 
     @media (max-width:500px) {
         display: flex;
@@ -26,6 +26,7 @@ export const StyledSelect = styled.select`
     padding: 20px;
     outline: none;
     text-align: center;
+    min-width: 110px;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
 
     @media (max-width:500px) {
@@ -41,7 +42,7 @@ export const StyledInput = styled.input`
     border-top-right-radius: 20px;
     height: 70px;
     outline: none;
-    padding: 20px;
+    padding: 20px 5px;
     text-align: center;
     margin-left: -2px;
     min-width: 100px;
