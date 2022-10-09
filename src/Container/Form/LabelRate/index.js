@@ -1,12 +1,12 @@
-import "./style.css";
+import { StyledRateContainer, StyledAmountRate, StyledRate } from "./styled";
 
 const LabelRate = ({ rate }) => {
     return (
         <>
-            <div className="inputContainer">
-                <div className="exchangeRate"><span>RATE</span></div>
-                <div className="amountExchangeRate">{rate.toFixed(4)}</div>
-            </div>
+            <StyledRateContainer>
+                <StyledRate>RATE</StyledRate>
+                <StyledAmountRate>{rate.toFixed(4)}</StyledAmountRate>
+            </StyledRateContainer>
         </>
     )
 };

@@ -1,12 +1,24 @@
-.inputContainer {
+import styled from "styled-components";
+
+export const StyledRateContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px;
     width: 60%;
-}
-.exchangeRate {
+
+    @media (max-width:500px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    min-width: 100%;
+    }
+`;
+
+export const StyledRate = styled.div`
     border: 2px solid black;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -19,9 +31,13 @@
     min-width: 109px;
     margin-right: -2px;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
-}
 
-.amountExchangeRate {
+    @media (max-width:500px) {
+        min-width: 50%;
+    }
+`;
+
+export const StyledAmountRate = styled.div`
     border: 2px solid black;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
@@ -33,28 +49,12 @@
     text-align: center;
     line-height: 1.5;
     background: linear-gradient(0deg, rgba(34, 153, 195, 1) 0%, rgba(0, 249, 158, 1) 100%);
-}
 
-.amountExchangeRate:disabled {
-    color: black;
-}
-
-@media (max-width:500px) {
-
-    .exchangeRate {
+    &:disabled{
+        color: black;
+    }
+    
+    @media (max-width:500px) {
         min-width: 50%;
     }
-
-    .amountExchangeRate {
-        min-width: 50%;
-    }
-    .inputContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 10px;
-        min-width: 100%;
-    }
-}
-
+`;
