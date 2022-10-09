@@ -9,12 +9,12 @@ export const StyledRateContainer = styled.div`
     width: 250px;
 
     @media (max-width:500px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 10px;
-    min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px;
+        min-width: 100%;
     }
 `;
 

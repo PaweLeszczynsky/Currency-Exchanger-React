@@ -17,7 +17,6 @@ export const StyledDateContainer = styled.div`
     font-size: small;
     
     @media (max-width:500px) {
-
         min-width: 100%;
     }
 `;

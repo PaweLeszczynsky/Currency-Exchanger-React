@@ -20,11 +20,11 @@ export const StyledSummaryInfo = styled.div`
     transition: all 1s;
 
     ${({ visible }) => visible && css`
-    border: 2px solid black;
-    min-height: 70px;
-    padding: 20px;
-    font-size: medium;
-    opacity: 1;
-    transition: all 1s;
+        border: 2px solid black;
+        min-height: 70px;
+        padding: 20px;
+        font-size: medium;
+        opacity: 1;
+        transition: all 1s;
     `}
 `;

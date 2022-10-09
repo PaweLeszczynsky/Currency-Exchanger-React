@@ -25,7 +25,7 @@ export const StyledFieldset = styled.fieldset`
         padding: 50px 8vw;
 }
     @media (max-width:350px) {
-            padding: 50px 0;
+        padding: 50px 0;
     }
 `;
 
