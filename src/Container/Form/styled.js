@@ -14,6 +14,7 @@ export const StyledForm = styled.form`
 
 export const StyledFieldset = styled.fieldset`
     padding: 50px;
+    padding-bottom: 0;
     border-radius: 20px;
     flex-basis: 800px;
     display: flex;
@@ -23,6 +24,7 @@ export const StyledFieldset = styled.fieldset`
     
     @media (max-width:500px) {
         padding: 50px 8vw;
+        padding-bottom: 0;
 }
     @media (max-width:350px) {
         padding: 50px 0;
