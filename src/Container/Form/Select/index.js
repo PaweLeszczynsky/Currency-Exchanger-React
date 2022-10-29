@@ -1,16 +1,15 @@
-import { allCurrencies } from "../../../currenciesArray";
 import { StyledSelectContainer, StyledSelect, StyledInput } from "./styled";
 
 const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
     setSecoundCurrency, amountToExchange, setAmountToExchange, selectName,
-    selectId, inputName, disabledValue, stepValue }) => {
+    selectId, inputName, disabledValue, stepValue, mapedCurrenciesArray }) => {
 
     const resetInput = () => {
         if (amountToExchange === 0) {
             setAmountToExchange("");
         };
     };
-    
+
     const findSelectValue = (index) => {
         return (index === 1 ? firstCurrency : secoundCurrency)
     };
@@ -39,9 +38,9 @@ const Select = ({ result, firstCurrency, setFirstCurrency, secoundCurrency,
                     onChange={({ target }) => findSelectModifier(selectId, target)}
                 >
                     {
-                        allCurrencies.map(({ id, name }) => (
-                            <option key={id} value={name}>{name}</option>)
-                        )
+                        mapedCurrenciesArray.map(currency => (
+                            <option key={currency} value={currency}>{currency}</option>
+                        ))
                     }
                 </StyledSelect>
                 <StyledInput
