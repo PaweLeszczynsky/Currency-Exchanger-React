@@ -1,22 +1,18 @@
 import Container from "./Container";
 import Form from "./Container/Form";
-import { useState, useEffect } from "react";
-import { allCurrencies } from "./currenciesArray";
+import { useState } from "react";
 import { useRate } from "./useRate";
+import { useCurrenciesArray } from "./useCurrenciesArray";
+import { useExchangeResult } from "./useExchangeResult";
+import { useAmountToExchange } from "./useAmountToExchange";
 
 function App() {
-  const [firstCurrency, setFirstCurrency] = useState(allCurrencies[0].name);
-  const [secoundCurrency, setSecoundCurrency] = useState(allCurrencies[0].name);
-  const [amountToExchange, setAmountToExchange] = useState(0);
-  const rate = useRate(firstCurrency, secoundCurrency);
-  const [result, setResult] = useState(0);
-
-  useEffect(() => {
-    if (amountToExchange < 0) {
-      setAmountToExchange(Math.abs(amountToExchange));
-    };
-    setResult(rate * amountToExchange);
-  }, [rate, amountToExchange]);
+  const { currenciesArray, mapedCurrenciesArray, currenciesDate, updateApiStatus } = useCurrenciesArray();
+  const [firstCurrency, setFirstCurrency] = useState("PLN");
+  const [secoundCurrency, setSecoundCurrency] = useState("PLN");
+  const rate = useRate(firstCurrency, secoundCurrency, currenciesArray);
+  const [amountToExchange, setAmountToExchange] = useAmountToExchange();
+  const result = useExchangeResult(rate, amountToExchange);
 
   return (
     <Container>
@@ -24,11 +20,15 @@ function App() {
         firstCurrency={firstCurrency}
         secoundCurrency={secoundCurrency}
         amountToExchange={amountToExchange}
-        rate={rate}
         result={result}
         setFirstCurrency={setFirstCurrency}
         setSecoundCurrency={setSecoundCurrency}
         setAmountToExchange={setAmountToExchange}
+        currenciesArray={currenciesArray}
+        mapedCurrenciesArray={mapedCurrenciesArray}
+        currenciesDate={currenciesDate}
+        updateApiStatus={updateApiStatus}
+        rate={rate}
       />
     </Container>
   );
