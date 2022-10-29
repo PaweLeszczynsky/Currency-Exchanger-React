@@ -9,13 +9,7 @@ Link to [App video presentation](https://youtu.be/WFuSZ3M9F6s)
 
 ## Description website
 
-The website allows exchange five currencies. 
-
-    - PLN
-    - EURO
-    - USD
-    - GBP
-    - CHF
+The website allows exchange all currencies using downloaded API from https://exchangerate.host. 
 
  Exchanger currency allows choose two types of currencies. First currency to exchange and secound target currency. After type any value the website automatically recalculates and presents the result. Additionally website shows the current exchange rate. After converting value, under rate value bar appears information bar and concludes currency exchange.
 
