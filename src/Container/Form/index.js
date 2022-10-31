@@ -10,7 +10,7 @@ import { ErrorContainer } from "./ErrorContainer";
 const Form = ({ firstCurrency, secoundCurrency, amountToExchange,
     setFirstCurrency, setSecoundCurrency, result,
     setAmountToExchange, currenciesArray, mapedCurrenciesArray,
-    currenciesDate, updateApiStatus, rate }) => {
+    currenciesDate, apiStatus, rate }) => {
 
     return (
         <StyledForm>
@@ -19,10 +19,10 @@ const Form = ({ firstCurrency, secoundCurrency, amountToExchange,
                     Currency Exchanger
                 </StyledLegend>
                 <DateContainer />
-                {updateApiStatus === "loading" && (
+                {apiStatus === "loading" && (
                     <UpdatingContainer />
                 )}
-                {updateApiStatus === "updated" && (
+                {apiStatus === "updated" && (
                     <>
                         <Select
                             firstCurrency={firstCurrency}
@@ -68,7 +68,7 @@ const Form = ({ firstCurrency, secoundCurrency, amountToExchange,
                         <CurrenciesApiInfo currenciesDate={currenciesDate} />
                     </>
                 )}
-                {updateApiStatus === "error" && (
+                {apiStatus === "error" && (
                     <ErrorContainer />
                 )}
             </StyledFieldset>

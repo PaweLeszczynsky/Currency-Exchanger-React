@@ -2,12 +2,12 @@ import Container from "./Container";
 import Form from "./Container/Form";
 import { useState } from "react";
 import { useRate } from "./useRate";
-import { useCurrenciesArray } from "./useCurrenciesArray";
+import { useCurrencies } from "./useCurrencies";
 import { useExchangeResult } from "./useExchangeResult";
 import { useAmountToExchange } from "./useAmountToExchange";
 
 function App() {
-  const { currenciesArray, mapedCurrenciesArray, currenciesDate, updateApiStatus } = useCurrenciesArray();
+  const { currenciesArray, mapedCurrenciesArray, currenciesDate, apiStatus } = useCurrencies();
   const [firstCurrency, setFirstCurrency] = useState("PLN");
   const [secoundCurrency, setSecoundCurrency] = useState("PLN");
   const rate = useRate(firstCurrency, secoundCurrency, currenciesArray);
@@ -27,7 +27,7 @@ function App() {
         currenciesArray={currenciesArray}
         mapedCurrenciesArray={mapedCurrenciesArray}
         currenciesDate={currenciesDate}
-        updateApiStatus={updateApiStatus}
+        apiStatus={apiStatus}
         rate={rate}
       />
     </Container>

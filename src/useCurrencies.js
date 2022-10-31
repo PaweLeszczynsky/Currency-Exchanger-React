@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export const useCurrenciesArray = () => {
+export const useCurrencies = () => {
     const [currenciesArray, setCurrenciesArray] = useState();
     const [mapedCurrenciesArray, setMapedCurrenciesArray] = useState();
     const [currenciesDate, setCurrenciesDate] = useState();
-    const [updateApiStatus, setUpdateApiStatus] = useState("loading");
+    const [apiStatus, setApiStatus] = useState("loading");
 
     useEffect(() => {
         getRates();
@@ -20,13 +20,13 @@ export const useCurrenciesArray = () => {
             setCurrenciesDate(response.data.date);
 
             setTimeout(() => {
-                setUpdateApiStatus("updated");
+                setApiStatus("updated");
             }, 3000);
         }
         catch {
-            setUpdateApiStatus("error");
+            setApiStatus("error");
         }
     };
 
-    return {currenciesArray, mapedCurrenciesArray, currenciesDate, updateApiStatus};
+    return {currenciesArray, mapedCurrenciesArray, currenciesDate, apiStatus};
 };
