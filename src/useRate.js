@@ -6,8 +6,8 @@ export const useRate = (firstCurrency, secoundCurrency, currenciesArray) => {
 
     useEffect(() => {
         if (currenciesArray !== undefined) {
-            const firstValue = currenciesArray[firstCurrency];
-            const secoundValue = currenciesArray[secoundCurrency];
+            const firstValue = currenciesArray[firstCurrency].value;
+            const secoundValue = currenciesArray[secoundCurrency].value;
             const rateValue = secoundValue / firstValue;
             setRate(rateValue);
         };
