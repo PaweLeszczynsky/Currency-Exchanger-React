@@ -14,10 +14,10 @@ export const useCurrencies = () => {
 
     const getRates = async () => {
         try {
-            const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
-            setCurrenciesArray(response.data.rates);
-            setMapedCurrenciesArray(Object.keys(response.data.rates));
-            setCurrenciesDate(response.data.date);
+            const response = await axios.get("https://api.currencyapi.com/v3/latest?apikey=cur_live_4KkP37qwi05H1LYMz7QUCpAIaTZ2cMPdcTjL28JA");
+            setCurrenciesArray(response.data.data);
+            setMapedCurrenciesArray(Object.keys(response.data.data));
+            setCurrenciesDate(response.data.meta.last_updated_at);
 
             setTimeout(() => {
                 setApiStatus("updated");
